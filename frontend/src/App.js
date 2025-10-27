@@ -1763,48 +1763,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Section Informations financières et organisationnelles */}
-                <div className="mb-8">
-                  <div className="bg-purple-500 text-white px-4 py-2 rounded-t-md">
-                    <h4 className="font-semibold">{"Financial Information"}</h4>
-                  </div>
-                  <div className="border border-purple-500 border-t-0 rounded-b-md p-4 bg-purple-50">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                      {/* Nombre d'employés */}
-                      {selectedCompany.employee_count && (
-                        <div className="bg-white p-3 rounded border">
-                          <div className="text-xs text-gray-500 font-medium">Nombre d'employés</div>
-                          <div className="text-lg font-bold text-purple-600">{selectedCompany.employee_count.toLocaleString()}</div>
-                        </div>
-                      )}
-                      
-                      {/* Chiffre d'affaires */}
-                      {selectedCompany.annual_revenue && (
-                        <div className="bg-white p-3 rounded border">
-                          <div className="text-xs text-gray-500 font-medium">Chiffre d'affaires annuel</div>
-                          <div className="text-lg font-bold text-purple-600">{selectedCompany.annual_revenue}</div>
-                        </div>
-                      )}
-                      
-                      {/* Année de création */}
-                      {selectedCompany.year_started && (
-                        <div className="bg-white p-3 rounded border">
-                          <div className="text-xs text-gray-500 font-medium">Année de création</div>
-                          <div className="text-lg font-bold text-purple-600">{selectedCompany.year_started}</div>
-                        </div>
-                      )}
-                      
-                      {/* Forme juridique */}
-                      {selectedCompany.legal_form && (
-                        <div className="bg-white p-3 rounded border">
-                          <div className="text-xs text-gray-500 font-medium">{"Legal Form"}</div>
-                          <div className="text-sm font-medium text-gray-800">{selectedCompany.legal_form}</div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
                 {/* Section Hiérarchie Corporative */}
                 {(loadingHierarchy || hierarchyData?.hierarchy || selectedCompany?.corporate_hierarchy) && (
                   <div className="mb-8">

@@ -1054,17 +1054,67 @@ function App() {
                 </div>
               </div>
               
-              {/* Search Help */}
-              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-md">
-                <h4 className="text-sm font-medium text-blue-800 mb-2">💡 Stratégies de recherche D&B :</h4>
-                <div className="text-xs text-blue-700 space-y-1">
-                  <p>• <strong>Recherche précise :</strong> D-U-N-S® ou Identifiant local</p>
-                  <p>• <strong>Recherche standard :</strong> Raison sociale + Pays/Région + Ville</p>
-                  <p>• <strong>Recherche étendue :</strong> Raison sociale + Adresse complète</p>
-                  <p>• <strong>Recherche géographique :</strong> Filtrage par continent, pays, état</p>
-                  <p>• <strong>Recherche par contact :</strong> Numéro de téléphone/fax avec présence</p>
-                </div>
+              {/* Search Strategies Info Button & Modal */}
+              <div className="mb-6 flex justify-center">
+                <button
+                  onClick={() => setShowStrategiesModal(true)}
+                  className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-md hover:bg-blue-200 transition-colors text-sm font-medium"
+                >
+                  <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  D&B Search Strategies
+                </button>
               </div>
+
+              {/* Modal for Search Strategies */}
+              {showStrategiesModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={() => setShowStrategiesModal(false)}>
+                  <div className="bg-white rounded-lg p-6 max-w-2xl w-full mx-4" onClick={(e) => e.stopPropagation()}>
+                    <div className="flex justify-between items-center mb-4">
+                      <h3 className="text-lg font-bold text-gray-900">💡 D&B Search Strategies</h3>
+                      <button
+                        onClick={() => setShowStrategiesModal(false)}
+                        className="text-gray-400 hover:text-gray-600"
+                      >
+                        <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div className="text-sm text-gray-700 space-y-3">
+                      <div>
+                        <p className="font-semibold text-blue-800">• Precise Search:</p>
+                        <p className="ml-4 text-gray-600">D-U-N-S® or Local Identifier</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-blue-800">• Standard Search:</p>
+                        <p className="ml-4 text-gray-600">Company Name + Country/Region + City</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-blue-800">• Extended Search:</p>
+                        <p className="ml-4 text-gray-600">Company Name + Complete Address</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-blue-800">• Geographic Search:</p>
+                        <p className="ml-4 text-gray-600">Filter by continent, country, state</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-blue-800">• Contact Search:</p>
+                        <p className="ml-4 text-gray-600">Phone/Fax number with presence indicator</p>
+                      </div>
+                    </div>
+                    <div className="mt-6 flex justify-end">
+                      <button
+                        onClick={() => setShowStrategiesModal(false)}
+                        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
               
               <div className="flex justify-center">
                 <button

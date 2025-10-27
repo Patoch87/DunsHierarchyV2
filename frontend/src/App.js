@@ -379,14 +379,14 @@ function App() {
       // Ajouter la feuille au classeur
       XLSX.utils.book_append_sheet(workbook, worksheet, 'Corporate Hierarchy');
 
-      // Feuille de métadonnées
+      // Metadata sheet
       const metadataSheet = XLSX.utils.json_to_sheet([
         { Property: 'Company Name', Value: selectedCompany.company_name || '' },
         { Property: 'D-U-N-S Number', Value: selectedCompany.duns || '' },
         { Property: 'Export Date', Value: new Date().toLocaleString() },
         { Property: 'Total Entities', Value: exportData.length },
         { Property: 'Data Source', Value: hierarchyData?.data_source || selectedCompany.data_source || 'D&B API' },
-        { Property: 'Language', Value: language },
+        { Property: 'Language', Value: 'English' },
         { Property: 'Instructions', Value: 'Use Level column to understand hierarchy. Negative levels = upward (parents), Positive levels = downward (subsidiaries)' }
       ]);
 

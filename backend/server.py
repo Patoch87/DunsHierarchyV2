@@ -103,6 +103,7 @@ class CompanySearchCriteria(BaseModel):
     phone_fax: Optional[str] = None
     has_phone: Optional[bool] = None
     has_fax: Optional[bool] = None
+    exact_match: Optional[bool] = False
 
 class HierarchyMember(BaseModel):
     duns: str

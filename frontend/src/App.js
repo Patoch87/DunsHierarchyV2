@@ -47,6 +47,7 @@ function App() {
   const [loadingHierarchy, setLoadingHierarchy] = useState(false);
   const [showDownwardFamilyTree, setShowDownwardFamilyTree] = useState(false);
   const [showStrategiesModal, setShowStrategiesModal] = useState(false);
+  const [activeTab, setActiveTab] = useState("search"); // "search" or "cached"
   // Plus de navigation par pages - tout sur une seule page
 
   // Navigation dans la hiérarchie

@@ -558,16 +558,13 @@ function App() {
           setError("Erreur de validation : " + validationErrors);
         }
       } else {
-        setError("Erreur lors de la recherche : " + (error.response?.data?.detail || error.message));
+        setError("Search error: " + (error.response?.data?.detail || error.message));
       }
     } finally {
       setLoading(false);
     }
     
-    // Navigation vers la page des résultats après recherche
-    if (searchResults.length > 0 || !loading) {
-      setCurrentPage('results');
-    }
+    // Results will be displayed below the search form - no page change
   };
 
   const fetchHierarchyData = async (duns) => {

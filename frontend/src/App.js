@@ -435,7 +435,7 @@ function App() {
       // Recherche
       searchTitle: "Recherche Business Partner",
       searchSubtitle: "Utilisation de l'API D&B",
-      duns: "Numéro D-U-N-S®",
+      duns: t("dunsNumberTitle"),
       localIdentifier: "Identifiant local",
       companyName: "Nom de l'entreprise",
       address: "Adresse",
@@ -534,15 +534,15 @@ function App() {
       employeeCount: "Nombre d'employés",
       salesVolume: "Chiffre d'affaires",
       postalAddress: "Adresse postale",
-      mailingAddress: "Adresse de correspondance",
+      mailingAddress: t("mailingAddressTitle"),
       phone: "Téléphone",
       fax: "Fax",
       email: "Email",
       website: "Site web",
       sicCode: "Code SIC",
-      naicsCode: "Code NAICS",
-      industry: "Secteur d'activité",
-      nationalIds: "Identifiants nationaux",
+      naicsCode: t("naicsCode"),
+      industry: t("industry"),
+      nationalIds: t("nationalIds"),
       type: "Type",
       number: "Numéro",
       
@@ -561,25 +561,25 @@ function App() {
       lastUpdated: "Dernière mise à jour",
       
       // Traductions supplémentaires pour la vue détaillée
-      identificationIdentifiers: "Identifiants D&B",
-      dunsNumberTitle: "Numéro D-U-N-S®",
-      establishmentType: "Type d'établissement",
+      identificationIdentifiers: t("identificationIdentifiers"),
+      dunsNumberTitle: t("dunsNumberTitle"),
+      establishmentType: t("establishmentType"),
       headquarters: "🏢 Siège social",
       establishment: "🏬 Établissement",
       active: "✅ Actif",
       inactive: "❌ Inactif",
-      sectorCodes: "Codes sectoriels",
-      primarySicCodeTitle: "Code SIC principal",
-      preferred: "Principal",
+      sectorCodes: t("sectorCodes"),
+      primarySicCodeTitle: t("primarySicCodeTitle"),
+      preferred: t("preferred"),
       typeLabel: "Type",
       classLabel: "Classe",
       locationLabel: "Lieu",
-      searchCriterion: "Critère de recherche",
+      searchCriterion: t("searchCriterion"),
       searchCriterionUsed: "Source",
-      postalAddressTitle: "Adresse postale (Siège)",
+      postalAddressTitle: t("postalAddressTitle"),
       coordinates: "Coordonnées",
-      mailingAddressTitle: "Adresse de correspondance",
-      identicalToPostalAddress: "Identique à l'adresse postale",
+      mailingAddressTitle: t("mailingAddressTitle"),
+      identicalToPostalAddress: t("identicalToPostalAddress"),
       primaryPhone: "Téléphone principal",
       faxNumber: "Télécopieur",
       employeeNumber: "Nombre d'employés",
@@ -1819,8 +1819,8 @@ function App() {
                               <div className="text-xs text-gray-500 font-medium">Type d'établissement</div>
                               <div className="text-sm font-medium text-gray-800">
                                 {selectedCompany.business_type.includes('Headquarters') || selectedCompany.business_type.includes('Single') 
-                                  ? '🏢 Siège social' 
-                                  : '🏬 Établissement'}
+                                  ? t("headquarters") 
+                                  : t("establishment")}
                               </div>
                               <div className="text-xs text-gray-600 mt-1">{selectedCompany.business_type}</div>
                             </div>
@@ -1835,7 +1835,7 @@ function App() {
                                   ? 'text-green-600' 
                                   : 'text-red-600'
                               }`}>
-                                {selectedCompany.operating_status.toLowerCase().includes('active') ? '✅ Actif' : '❌ Inactif'}
+                                {selectedCompany.operating_status.toLowerCase().includes('active') ? t("active") : t("inactive")}
                               </div>
                               <div className="text-xs text-gray-600 mt-1">{selectedCompany.operating_status}</div>
                             </div>

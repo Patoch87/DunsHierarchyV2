@@ -1793,12 +1793,12 @@ function App() {
                             <button
                               onClick={exportHierarchyToExcel}
                               className="text-sm bg-green-600 hover:bg-green-700 px-3 py-1 rounded-md transition-colors flex items-center"
-                              title={t('exportToExcel')}
+                              title={"Export to Excel"}
                             >
                               <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                               </svg>
-                              {t('exportToExcel')}
+                              {"Export to Excel"}
                             </button>
                             <button
                               onClick={() => setShowDownwardFamilyTree(!showDownwardFamilyTree)}
@@ -1987,7 +1987,7 @@ function App() {
                                 {/* Family Tree */}
                                 {hierarchy.familyTreeMembers && hierarchy.familyTreeMembers.length > 0 && (
                                   <div>
-                                    <h5 className="font-medium text-gray-900 mb-2">{"Family Tree"} ({hierarchy.familyTreeMembers.length} {t('members')})</h5>
+                                    <h5 className="font-medium text-gray-900 mb-2">{"Family Tree"} ({hierarchy.familyTreeMembers.length} {"members"})</h5>
                                     <div className="bg-gray-50 border border-gray-200 rounded-md p-3 max-h-48 overflow-y-auto">
                                       {hierarchy.familyTreeMembers.map((member, index) => (
                                         <div key={index} className="flex justify-between items-center py-2 border-b last:border-b-0 hover:bg-gray-100 cursor-pointer transition-colors rounded px-2" onClick={() => navigateToCompany(member.duns, member.primaryName)}>
@@ -2013,7 +2013,7 @@ function App() {
 
                                 {/* Data Source */}
                                 <div className="text-xs text-gray-500 text-center pt-4 border-t border-gray-200">
-                                  {t('source')}: {hierarchyData?.data_source || "D&B Hierarchy API"}
+                                  {"Source"}: {hierarchyData?.data_source || "D&B Hierarchy API"}
                                 </div>
                               </>
                             ); // Close regular hierarchy view
@@ -2031,7 +2031,7 @@ function App() {
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="flex justify-between items-center text-xs text-gray-500">
                     <p>{"Last Updated"}: {new Date(selectedCompany.last_updated).toLocaleString('fr-FR')}</p>
-                    <p>{t('source')}: {selectedCompany.data_source || "D&B API"}</p>
+                    <p>{"Source"}: {selectedCompany.data_source || "D&B API"}</p>
                   </div>
                 </div>
               </div>

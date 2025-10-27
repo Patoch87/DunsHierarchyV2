@@ -710,7 +710,7 @@ function App() {
       mailingAddress: "Mailing address",
       phone: "Phone",
       fax: "Fax",
-      email: t("email"), 
+      email: "Email",
       website: "Website",
       sicCode: "SIC Code",
       naicsCode: "NAICS Code",

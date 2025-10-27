@@ -1644,13 +1644,13 @@ function App() {
                   </div>
                   <div className="border border-green-500 border-t-0 rounded-b-md p-4 bg-green-50">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {/* Adresse principale (Postal Address) */}
+                      {/* Primary Address */}
                       <div>
                         <h5 className="font-medium text-gray-900 mb-3 flex items-center">
                           <svg className="h-4 w-4 mr-1 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                           </svg>
-                          Adresse postale (Siège)
+                          Primary Address (Headquarters)
                         </h5>
                         <div className="bg-white p-4 rounded border">
                           <div className="text-sm text-gray-700 space-y-1">
@@ -1692,15 +1692,15 @@ function App() {
                                 {/* Country */}
                                 {selectedCompany.address.country && (
                                   <div>
-                                    <span className="text-xs text-gray-500 font-medium">{"Country/Region"}: </span>
+                                    <span className="text-xs text-gray-500 font-medium">{"Country"}: </span>
                                     <span className="font-medium">{selectedCompany.address.country}</span>
                                   </div>
                                 )}
                                 
-                                {/* Coordonnées géographiques si disponibles */}
+                                {/* Geographic coordinates if available */}
                                 {selectedCompany.address.latitude && selectedCompany.address.longitude && (
                                   <div className="mt-2 text-xs text-gray-500">
-                                    <span className="font-medium">Coordonnées:</span>
+                                    <span className="font-medium">Coordinates: </span>
                                     <span>{selectedCompany.address.latitude}, {selectedCompany.address.longitude}</span>
                                   </div>
                                 )}

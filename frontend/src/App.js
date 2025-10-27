@@ -558,7 +558,32 @@ function App() {
       level: "Niveau",
       noHierarchyAvailable: "Aucune information de hiérarchie disponible",
       dataSource: "Source des données",
-      lastUpdated: "Dernière mise à jour"
+      lastUpdated: "Dernière mise à jour",
+      
+      // Traductions supplémentaires pour la vue détaillée
+      identificationIdentifiers: "Identifiants D&B",
+      dunsNumberTitle: "Numéro D-U-N-S®",
+      establishmentType: "Type d'établissement",
+      headquarters: "🏢 Siège social",
+      establishment: "🏬 Établissement",
+      active: "✅ Actif",
+      inactive: "❌ Inactif",
+      sectorCodes: "Codes sectoriels",
+      primarySicCodeTitle: "Code SIC principal",
+      preferred: "Principal",
+      typeLabel: "Type",
+      classLabel: "Classe",
+      locationLabel: "Lieu",
+      searchCriterion: "Critère de recherche",
+      searchCriterionUsed: "Source",
+      postalAddressTitle: "Adresse postale (Siège)",
+      coordinates: "Coordonnées",
+      mailingAddressTitle: "Adresse de correspondance",
+      identicalToPostalAddress: "Identique à l'adresse postale",
+      primaryPhone: "Téléphone principal",
+      faxNumber: "Télécopieur",
+      employeeNumber: "Nombre d'employés",
+      annualRevenueTitle: "Chiffre d'affaires annuel"
     },
     en: {
       // Authentication

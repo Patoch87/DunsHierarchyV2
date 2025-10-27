@@ -454,6 +454,8 @@ function App() {
       clearButton: "Effacer",
       searchInProgress: "Recherche D&B en cours...",
       launchSearch: "Lancer la recherche D&B",
+      exactMatch: "Correspondance exacte",
+      exactMatchHelp: "Rechercher uniquement les noms exacts",
       
       // Sections
       identificationSection: "🆔 Identification",

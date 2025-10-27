@@ -261,7 +261,7 @@ def create_mock_company_data(duns: str) -> Optional[Company]:
             "address": Address(
                 street="One Apple Park Way",
                 city="Cupertino",
-                state": "CA",
+                state="CA",
                 postal_code="95014",
                 country="United States",
                 continent="North America",

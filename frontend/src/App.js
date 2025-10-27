@@ -1722,10 +1722,10 @@ function App() {
                   </div>
                   <div className="border border-orange-500 border-t-0 rounded-b-md p-4 bg-orange-50">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {/* Téléphone */}
+                      {/* Phone */}
                       {selectedCompany.phone && (
                         <div className="bg-white p-3 rounded border">
-                          <div className="text-xs text-gray-500 font-medium">Téléphone principal</div>
+                          <div className="text-xs text-gray-500 font-medium">Primary Phone</div>
                           <div className="text-sm font-mono text-orange-600 font-medium">{selectedCompany.phone}</div>
                         </div>
                       )}
@@ -1733,15 +1733,15 @@ function App() {
                       {/* Fax */}
                       {selectedCompany.fax && (
                         <div className="bg-white p-3 rounded border">
-                          <div className="text-xs text-gray-500 font-medium">Télécopieur</div>
+                          <div className="text-xs text-gray-500 font-medium">Fax</div>
                           <div className="text-sm font-mono text-orange-600 font-medium">{selectedCompany.fax}</div>
                         </div>
                       )}
                       
-                      {/* Site web */}
+                      {/* Website */}
                       {selectedCompany.website && (
                         <div className="bg-white p-3 rounded border">
-                          <div className="text-xs text-gray-500 font-medium">Site web</div>
+                          <div className="text-xs text-gray-500 font-medium">Website</div>
                           <a href={selectedCompany.website} target="_blank" rel="noopener noreferrer" 
                              className="text-sm text-blue-600 hover:text-blue-800 underline">
                             {selectedCompany.website}

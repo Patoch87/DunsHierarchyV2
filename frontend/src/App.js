@@ -534,7 +534,7 @@ function App() {
       employeeCount: "Nombre d'employés",
       salesVolume: "Chiffre d'affaires",
       postalAddress: "Adresse postale",
-      mailingAddress: t("mailingAddressTitle"),
+      mailingAddress: "Adresse de correspondance",
       phone: "Téléphone",
       fax: "Fax",
       email: "Email",

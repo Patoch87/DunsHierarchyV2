@@ -1940,31 +1940,55 @@ function App() {
                           Adresse postale (Siège)
                         </h5>
                         <div className="bg-white p-4 rounded border">
-                          <div className="text-sm text-gray-700">
+                          <div className="text-sm text-gray-700 space-y-1">
                             <p className="font-medium text-gray-900">{selectedCompany.company_name}</p>
                             {selectedCompany.address && (
                               <>
+                                {/* Street */}
                                 {selectedCompany.address.street && (
-                                  <p className="mt-1">{selectedCompany.address.street}</p>
+                                  <div>
+                                    <span className="text-xs text-gray-500 font-medium">Street: </span>
+                                    <span>{selectedCompany.address.street}</span>
+                                  </div>
                                 )}
-                                {selectedCompany.address.additional_lines && (
-                                  selectedCompany.address.additional_lines.map((line, idx) => (
-                                    <p key={idx}>{line}</p>
-                                  ))
+                                
+                                {/* Postal Code */}
+                                {selectedCompany.address.postal_code && (
+                                  <div>
+                                    <span className="text-xs text-gray-500 font-medium">{t("postalCode")}: </span>
+                                    <span>{selectedCompany.address.postal_code}</span>
+                                  </div>
                                 )}
-                                <p className="mt-1">
-                                  {selectedCompany.address.postal_code && `${selectedCompany.address.postal_code} `}
-                                  {selectedCompany.address.city}
-                                  {selectedCompany.address.state && `, ${selectedCompany.address.state}`}
-                                </p>
+                                
+                                {/* City */}
+                                {selectedCompany.address.city && (
+                                  <div>
+                                    <span className="text-xs text-gray-500 font-medium">{t("city")}: </span>
+                                    <span>{selectedCompany.address.city}</span>
+                                  </div>
+                                )}
+                                
+                                {/* State (optional) */}
+                                {selectedCompany.address.state && (
+                                  <div>
+                                    <span className="text-xs text-gray-500 font-medium">{t("state")}: </span>
+                                    <span>{selectedCompany.address.state}</span>
+                                  </div>
+                                )}
+                                
+                                {/* Country */}
                                 {selectedCompany.address.country && (
-                                  <p className="font-medium">{selectedCompany.address.country}</p>
+                                  <div>
+                                    <span className="text-xs text-gray-500 font-medium">{t("country")}: </span>
+                                    <span className="font-medium">{selectedCompany.address.country}</span>
+                                  </div>
                                 )}
                                 
                                 {/* Coordonnées géographiques si disponibles */}
                                 {selectedCompany.address.latitude && selectedCompany.address.longitude && (
                                   <div className="mt-2 text-xs text-gray-500">
-                                    <span className="font-medium">Coordonnées:</span> {selectedCompany.address.latitude}, {selectedCompany.address.longitude}
+                                    <span className="font-medium">Coordonnées:</span>
+                                    <span>{selectedCompany.address.latitude}, {selectedCompany.address.longitude}</span>
                                   </div>
                                 )}
                               </>

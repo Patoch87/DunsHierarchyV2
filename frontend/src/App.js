@@ -622,6 +622,8 @@ function App() {
       clearButton: "Clear",
       searchInProgress: "D&B Search in progress...",
       launchSearch: "Launch D&B Search",
+      exactMatch: "Exact Match",
+      exactMatchHelp: "Search only exact names",
       
       // Sections
       identificationSection: "🆔 Identification",

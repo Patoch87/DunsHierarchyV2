@@ -133,13 +133,20 @@ function App() {
     }
   };
 
-  // Fonction d'export Excel de la hiérarchie
+  // Excel Export Function for Corporate Hierarchy
   const exportHierarchyToExcel = () => {
     console.log("🚀 Export Excel clicked!");
     
+    // Check if XLSX library is loaded
+    if (typeof XLSX === 'undefined') {
+      console.error("❌ XLSX library not loaded");
+      alert("Excel library not loaded. Please refresh the page and try again.");
+      return;
+    }
+    
     if (!selectedCompany) {
       console.error("❌ No selected company");
-      alert("Aucune entreprise sélectionnée");
+      alert("No company selected");
       return;
     }
     
@@ -155,7 +162,7 @@ function App() {
     console.log("✅ Hierarchy data found:", hierarchy);
 
     try {
-      // Création des données pour Excel avec structure navigable
+      // Create data for Excel with navigable structure
       const exportData = [];
 
       // En-tête principal - Company actuelle

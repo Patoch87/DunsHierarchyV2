@@ -55,7 +55,8 @@
     "vaul": "^1.1.2",
     "xlsx": "^0.18.5",
     "zod": "^3.24.4",
-    "serve": "^14.2.0"
+    "serve": "^14.2.0",
+    "@craco/craco": "^7.1.0"
   },
   "scripts": {
     "start": "craco start",
@@ -76,7 +77,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@craco/craco": "^7.1.0",
     "@eslint/js": "9.23.0",
     "autoprefixer": "^10.4.20",
     "eslint": "9.23.0",

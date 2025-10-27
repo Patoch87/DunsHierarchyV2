@@ -994,13 +994,13 @@ function App() {
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="">{"Select continent"}</option>
-                      <option value="Europe">{t('europe')}</option>
-                      <option value="Amérique du Nord">{t('northAmerica')}</option>
-                      <option value="Amérique du Sud">{t('southAmerica')}</option>
-                      <option value="Asie">{t('asia')}</option>
-                      <option value="Afrique">{t('africa')}</option>
-                      <option value="Océanie">{t('oceania')}</option>
-                      <option value="Antarctique">{t('antarctica')}</option>
+                      <option value="Europe">{"Europe"}</option>
+                      <option value="Amérique du Nord">{"North America"}</option>
+                      <option value="Amérique du Sud">{"South America"}</option>
+                      <option value="Asie">{"Asia"}</option>
+                      <option value="Afrique">{"Africa"}</option>
+                      <option value="Océanie">{"Oceania"}</option>
+                      <option value="Antarctique">{"Antarctica"}</option>
                     </select>
                   </div>
                 </div>
@@ -1123,14 +1123,14 @@ function App() {
                 <table className="min-w-full bg-white">
                   <thead className="bg-gray-800 text-white">
                     <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('dunsNumber')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('companyNameD')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('score')}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"D-U-N-S®"}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Company Name"}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Match Score"}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{"Address"}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{"City"}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{"Country/Region"}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('registration')}</th>
-                      <th className="px-4 py-3 text-center text-sm font-semibold">{t('action')}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Registration"}</th>
+                      <th className="px-4 py-3 text-center text-sm font-semibold">{"Action"}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -1219,7 +1219,7 @@ function App() {
               </svg>
               <h3 className="mt-2 text-sm font-medium text-gray-900">{"No results found"}</h3>
               <p className="mt-1 text-sm text-gray-500">
-                {t('noResultsMessage')}
+                {"No results to display"}
               </p>
             </div>
           )}
@@ -1299,14 +1299,14 @@ function App() {
                 <table className="min-w-full bg-white border border-gray-200">
                   <thead className="bg-gray-800 text-white">
                     <tr>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('dunsNumber')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('companyNameD')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('score')}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"D-U-N-S®"}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Company Name"}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Match Score"}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{"Address"}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{"City"}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{"Country/Region"}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('registration')}</th>
-                      <th className="px-4 py-3 text-center text-sm font-semibold">{t('action')}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Registration"}</th>
+                      <th className="px-4 py-3 text-center text-sm font-semibold">{"Action"}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -1391,7 +1391,7 @@ function App() {
                 </svg>
                 <h3 className="mt-2 text-sm font-medium text-gray-900">{"No results found"}</h3>
                 <p className="mt-1 text-sm text-gray-500">
-                  {t('noResultsMessage')}
+                  {"No results to display"}
                 </p>
               </div>
             )}
@@ -1447,13 +1447,13 @@ function App() {
                       onClick={navigateBack}
                       className="px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-md text-sm font-medium transition-colors flex items-center"
                     >
-                      {t('backToPrevious')}
+                      {"← Back"}
                     </button>
                   )}
                 </div>
                 {selectedCompany.legal_name && selectedCompany.legal_name !== selectedCompany.company_name && (
                   <p className="text-blue-100 mt-1">
-                    {t('legalName')}: {selectedCompany.legal_name}
+                    {"Legal Name"}: {selectedCompany.legal_name}
                   </p>
                 )}
               </div>
@@ -1462,7 +1462,7 @@ function App() {
                 {/* Section Identification - Enhanced */}
                 <div className="mb-8">
                   <div className="bg-blue-500 text-white px-4 py-2 rounded-t-md">
-                    <h4 className="font-semibold">{t('identificationStatus')}</h4>
+                    <h4 className="font-semibold">{"Identification & Status"}</h4>
                   </div>
                   <div className="border border-blue-500 border-t-0 rounded-b-md p-4 bg-blue-50">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1589,7 +1589,7 @@ function App() {
                 {/* Section Adresses - Enhanced with Postal vs Mailing */}
                 <div className="mb-8">
                   <div className="bg-green-500 text-white px-4 py-2 rounded-t-md">
-                    <h4 className="font-semibold">{t('addressLocation')}</h4>
+                    <h4 className="font-semibold">{"Address & Location"}</h4>
                   </div>
                   <div className="border border-green-500 border-t-0 rounded-b-md p-4 bg-green-50">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1695,7 +1695,7 @@ function App() {
                 {/* Section Contact & Communication */}
                 <div className="mb-8">
                   <div className="bg-orange-500 text-white px-4 py-2 rounded-t-md">
-                    <h4 className="font-semibold">{t('contactCommunication')}</h4>
+                    <h4 className="font-semibold">{"Contact & Communication"}</h4>
                   </div>
                   <div className="border border-orange-500 border-t-0 rounded-b-md p-4 bg-orange-50">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1743,7 +1743,7 @@ function App() {
                 {/* Section Informations financières et organisationnelles */}
                 <div className="mb-8">
                   <div className="bg-purple-500 text-white px-4 py-2 rounded-t-md">
-                    <h4 className="font-semibold">{t('financialInfo')}</h4>
+                    <h4 className="font-semibold">{"Financial Information"}</h4>
                   </div>
                   <div className="border border-purple-500 border-t-0 rounded-b-md p-4 bg-purple-50">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

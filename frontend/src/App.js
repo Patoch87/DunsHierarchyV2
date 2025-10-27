@@ -1517,19 +1517,19 @@ function App() {
                   </div>
                   <div className="border border-blue-500 border-t-0 rounded-b-md p-4 bg-blue-50">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {/* Colonne 1: Identifiants */}
+                      {/* Column 1: Identifiers */}
                       <div>
-                        <h5 className="font-medium text-gray-900 mb-3">Identifiants D&B</h5>
+                        <h5 className="font-medium text-gray-900 mb-3">D&B Identifiers</h5>
                         <div className="space-y-2">
                           <div className="bg-white p-3 rounded border">
-                            <div className="text-xs text-gray-500 font-medium">Numéro D-U-N-S®</div>
+                            <div className="text-xs text-gray-500 font-medium">D-U-N-S® Number</div>
                             <div className="text-lg font-mono text-blue-600 font-bold">{selectedCompany.duns}</div>
                           </div>
                           
-                          {/* Type d'établissement */}
+                          {/* Establishment Type */}
                           {selectedCompany.business_type && (
                             <div className="bg-white p-3 rounded border">
-                              <div className="text-xs text-gray-500 font-medium">Type d'établissement</div>
+                              <div className="text-xs text-gray-500 font-medium">Establishment Type</div>
                               <div className="text-sm font-medium text-gray-800">
                                 {selectedCompany.business_type.includes('Headquarters') || selectedCompany.business_type.includes('Single') 
                                   ? "🏢 Headquarters" 
@@ -1539,7 +1539,7 @@ function App() {
                             </div>
                           )}
                           
-                          {/* Statut opérationnel */}
+                          {/* Operating Status */}
                           {selectedCompany.operating_status && (
                             <div className="bg-white p-3 rounded border">
                               <div className="text-xs text-gray-500 font-medium">{"Operating Status"}</div>
@@ -1556,14 +1556,14 @@ function App() {
                         </div>
                       </div>
                       
-                      {/* Colonne 2: Codes sectoriels */}
+                      {/* Column 2: Sector Codes & SIC */}
                       <div>
-                        <h5 className="font-medium text-gray-900 mb-3">Codes sectoriels</h5>
+                        <h5 className="font-medium text-gray-900 mb-3">Sector Codes</h5>
                         <div className="space-y-2">
-                          {/* Code SIC principal */}
+                          {/* Primary SIC Code */}
                           {selectedCompany.primary_sic_code && (
                             <div className="bg-white p-3 rounded border">
-                              <div className="text-xs text-gray-500 font-medium">Code SIC principal</div>
+                              <div className="text-xs text-gray-500 font-medium">Primary SIC Code</div>
                               <div className="text-sm font-mono text-purple-600 font-bold">{selectedCompany.primary_sic_code}</div>
                               {selectedCompany.primary_sic_description && (
                                 <div className="text-xs text-gray-600 mt-1">{selectedCompany.primary_sic_description}</div>
@@ -1571,10 +1571,10 @@ function App() {
                             </div>
                           )}
                           
-                          {/* Code NAICS */}
+                          {/* NAICS Code */}
                           {selectedCompany.naics_code && (
                             <div className="bg-white p-3 rounded border">
-                              <div className="text-xs text-gray-500 font-medium">Code NAICS</div>
+                              <div className="text-xs text-gray-500 font-medium">NAICS Code</div>
                               <div className="text-sm font-mono text-purple-600 font-bold">{selectedCompany.naics_code}</div>
                               {selectedCompany.naics_description && (
                                 <div className="text-xs text-gray-600 mt-1">{selectedCompany.naics_description}</div>

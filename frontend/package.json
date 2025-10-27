@@ -95,4 +95,12 @@
     "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix frontend"
   }
 }
+{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "serve": "^14.2.0"  // Ajout de la dépendance serve
+  },
+  …
+}
 

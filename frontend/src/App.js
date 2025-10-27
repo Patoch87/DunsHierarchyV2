@@ -583,12 +583,12 @@ function App() {
       searchCriterionUsed: "Source",
       postalAddressTitle: t("postalAddressTitle"),
       coordinates: "Coordonnées",
-      mailingAddressTitle: t("mailingAddressTitle"),
-      identicalToPostalAddress: t("identicalToPostalAddress"),
-      primaryPhone: t("primaryPhone"),
-      faxNumber: t("faxNumber"),
-      employeeNumber: t("employeeNumber"),
-      annualRevenueTitle: t("annualRevenueTitle")
+      mailingAddressTitle: "Adresse de correspondance",
+      identicalToPostalAddress: "Identique à l'adresse postale",
+      primaryPhone: "Téléphone principal",
+      faxNumber: "Télécopieur",
+      employeeNumber: "Nombre d'employés",
+      annualRevenueTitle: "Chiffre d'affaires annuel"
     },
     en: {
       // Authentication

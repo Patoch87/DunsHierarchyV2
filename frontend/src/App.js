@@ -4,6 +4,8 @@ import axios from "axios";
 import Login from "./Login";
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
+import EnhancedCompanyDetails from './EnhancedCompanyDetails';
+
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;

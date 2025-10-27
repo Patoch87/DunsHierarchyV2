@@ -775,31 +775,7 @@ function App() {
                 <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
-                Connecté en tant que: <span className="font-medium ml-1">{username}</span>
-              </div>
-              
-              {/* Language Toggle */}
-              <div className="flex items-center bg-gray-100 rounded-lg p-1">
-                <button
-                  onClick={() => setLanguage('fr')}
-                  className={`px-3 py-1 text-sm rounded-md transition-colors ${
-                    language === 'fr' 
-                      ? 'bg-white text-gray-900 shadow-sm' 
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
-                >
-                  🇫🇷 FR
-                </button>
-                <button
-                  onClick={() => setLanguage('en')}
-                  className={`px-3 py-1 text-sm rounded-md transition-colors ${
-                    language === 'en' 
-                      ? 'bg-white text-gray-900 shadow-sm' 
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
-                >
-                  🇺🇸 EN
-                </button>
+                Connected as: <span className="font-medium ml-1">{username}</span>
               </div>
               
               <button

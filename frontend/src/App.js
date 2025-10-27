@@ -43,11 +43,10 @@ function App() {
   const [cachedCompanies, setCachedCompanies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [activeTab, setActiveTab] = useState("search");
   const [hierarchyData, setHierarchyData] = useState(null);
   const [loadingHierarchy, setLoadingHierarchy] = useState(false);
   const [showDownwardFamilyTree, setShowDownwardFamilyTree] = useState(false);
-  const [language, setLanguage] = useState('fr'); // 'fr' or 'en'
+  const [showStrategiesModal, setShowStrategiesModal] = useState(false);
 
   // Navigation dans la hiérarchie
   const [navigationHistory, setNavigationHistory] = useState([]);

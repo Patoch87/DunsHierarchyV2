@@ -435,10 +435,10 @@ function App() {
       results: "Résultats",
       cached: "Historique",
       
-      // Recherche
+      // Search
       searchTitle: "Recherche Business Partner",
       searchSubtitle: "Utilisation de l'API D&B",
-      duns: t("dunsNumberTitle"),
+      duns: "Numéro D-U-N-S®",
       localIdentifier: "Identifiant local",
       companyName: "Nom de l'entreprise",
       address: "Adresse",

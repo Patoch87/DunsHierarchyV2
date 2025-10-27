@@ -147,7 +147,7 @@ function App() {
     const hierarchy = hierarchyData?.hierarchy || selectedCompany?.corporate_hierarchy;
     if (!hierarchy) {
       console.error("❌ No hierarchy data available");
-      alert(t('noHierarchyAvailable'));
+      alert("No hierarchy information available");
       return;
     }
     
@@ -765,7 +765,7 @@ function App() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <h1 className="text-xl font-semibold text-gray-900">
-                {t('searchTitle')}
+                {"Business Partner Search"}
               </h1>
             </div>
             <div className="flex items-center space-x-4">
@@ -801,12 +801,12 @@ function App() {
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
                       <h1 className="text-2xl font-bold text-gray-900">
-                        {t('searchTitle')}
+                        {"Business Partner Search"}
                       </h1>
                     </div>
                   </div>
                   <div className="text-sm text-gray-500">
-                    {t('searchSubtitle')} - Powered by D&B Direct Plus API
+                    {"Using D&B API"} - Powered by D&B Direct Plus API
                   </div>
                 </div>
               </div>
@@ -823,7 +823,7 @@ function App() {
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
-              {t('search')}
+              {"Search"}
             </button>
             <button
               onClick={() => setActiveTab("cached")}
@@ -833,7 +833,7 @@ function App() {
                   : "text-gray-500 hover:text-gray-700"
               }`}
             >
-              {t('cached')} ({cachedCompanies.length})
+              {"History"} ({cachedCompanies.length})
             </button>
           </div>
 
@@ -842,23 +842,23 @@ function App() {
             <div className="bg-white rounded-lg shadow p-6 mb-8">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-lg font-medium text-gray-900">
-                  {t('searchTitle')}
+                  {"Business Partner Search"}
                 </h2>
                 <button
                   onClick={clearSearch}
                   className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
                 >
-                  {t('clearButton')}
+                  {"Clear"}
                 </button>
               </div>
               
               {/* Section Identification */}
               <div className="mb-8">
-                <h3 className="text-md font-medium text-gray-800 mb-4 pb-2 border-b border-gray-200">{t('identificationSection')}</h3>
+                <h3 className="text-md font-medium text-gray-800 mb-4 pb-2 border-b border-gray-200">{"🆔 Identification"}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('duns')}
+                      {"D-U-N-S® Number"}
                     </label>
                     <input
                       type="text"
@@ -872,7 +872,7 @@ function App() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('localIdentifier')}
+                      {"Local Identifier"}
                     </label>
                     <input
                       type="text"
@@ -885,7 +885,7 @@ function App() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('companyName')}
+                      {"Company Name"}
                     </label>
                     <input
                       type="text"
@@ -906,8 +906,8 @@ function App() {
                           className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                         />
                         <label htmlFor="exact-match" className="ml-2 text-sm text-gray-700">
-                          <span className="font-medium">{t('exactMatch')}</span>
-                          <span className="text-gray-500 ml-1">({t('exactMatchHelp')})</span>
+                          <span className="font-medium">{"Exact Match"}</span>
+                          <span className="text-gray-500 ml-1">({"Search only exact names"})</span>
                         </label>
                       </div>
                     )}
@@ -917,11 +917,11 @@ function App() {
 
               {/* Section Adresse */}
               <div className="mb-8">
-                <h3 className="text-md font-medium text-gray-800 mb-4 pb-2 border-b border-gray-200">{t('addressSection')}</h3>
+                <h3 className="text-md font-medium text-gray-800 mb-4 pb-2 border-b border-gray-200">{"🏢 Address"}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="lg:col-span-2">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('address')}
+                      {"Address"}
                     </label>
                     <input
                       type="text"
@@ -934,7 +934,7 @@ function App() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('city')}
+                      {"City"}
                     </label>
                     <input
                       type="text"
@@ -947,7 +947,7 @@ function App() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('postalCode')}
+                      {"Postal Code"}
                     </label>
                     <input
                       type="text"
@@ -960,7 +960,7 @@ function App() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('state')}
+                      {"State"}
                     </label>
                     <input
                       type="text"
@@ -973,7 +973,7 @@ function App() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('country')}
+                      {"Country/Region"}
                     </label>
                     <input
                       type="text"
@@ -986,14 +986,14 @@ function App() {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('continent')}
+                      {"Continent"}
                     </label>
                     <select
                       value={searchCriteria.continent}
                       onChange={(e) => handleInputChange("continent", e.target.value)}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      <option value="">{t('selectContinent')}</option>
+                      <option value="">{"Select continent"}</option>
                       <option value="Europe">{t('europe')}</option>
                       <option value="Amérique du Nord">{t('northAmerica')}</option>
                       <option value="Amérique du Sud">{t('southAmerica')}</option>
@@ -1008,11 +1008,11 @@ function App() {
 
               {/* Section Contact */}
               <div className="mb-8">
-                <h3 className="text-md font-medium text-gray-800 mb-4 pb-2 border-b border-gray-200">{t('contactSection')}</h3>
+                <h3 className="text-md font-medium text-gray-800 mb-4 pb-2 border-b border-gray-200">{"📞 Contact"}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="lg:col-span-2">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('phoneFax')}
+                      {"Phone/Fax"}
                     </label>
                     <input
                       type="text"
@@ -1033,7 +1033,7 @@ function App() {
                         className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                       />
                       <label htmlFor="has_phone" className="ml-2 block text-sm text-gray-700">
-                        {t('phonePresent')}
+                        {"Phone Present"}
                       </label>
                     </div>
                     
@@ -1046,7 +1046,7 @@ function App() {
                         className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                       />
                       <label htmlFor="has_fax" className="ml-2 block text-sm text-gray-700">
-                        {t('faxPresent')}
+                        {"Fax Present"}
                       </label>
                     </div>
                   </div>
@@ -1074,14 +1074,14 @@ function App() {
                   {loading ? (
                     <>
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                      {t('searchInProgress')}
+                      {"D&B Search in progress..."}
                     </>
                   ) : (
                     <>
                       <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                       </svg>
-                      {t('launchSearch')}
+                      {"Launch D&B Search"}
                     </>
                   )}
                 </button>
@@ -1110,7 +1110,7 @@ function App() {
             <div className="mt-6">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-lg font-medium text-gray-900">
-                  {t('searchResults')} ({searchResults.length})
+                  {"Search Results"} ({searchResults.length})
                 </h3>
                 {searchResults.length > 0 && (
                   <span className="text-sm text-gray-500">
@@ -1126,9 +1126,9 @@ function App() {
                       <th className="px-4 py-3 text-left text-sm font-semibold">{t('dunsNumber')}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{t('companyNameD')}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{t('score')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('address')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('city')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('country')}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Address"}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"City"}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Country/Region"}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{t('registration')}</th>
                       <th className="px-4 py-3 text-center text-sm font-semibold">{t('action')}</th>
                     </tr>
@@ -1200,7 +1200,7 @@ function App() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
-                            {t('viewDetails')}
+                            {"View Details"}
                           </button>
                         </td>
                       </tr>
@@ -1217,7 +1217,7 @@ function App() {
               <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              <h3 className="mt-2 text-sm font-medium text-gray-900">{t('noResults')}</h3>
+              <h3 className="mt-2 text-sm font-medium text-gray-900">{"No results found"}</h3>
               <p className="mt-1 text-sm text-gray-500">
                 {t('noResultsMessage')}
               </p>
@@ -1279,17 +1279,17 @@ function App() {
             <div className="flex justify-between items-center mb-6">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  {t('searchResults')}
+                  {"Search Results"}
                 </h1>
                 <p className="mt-2 text-sm text-gray-600">
-                  {searchResults.length} {searchResults.length > 1 ? t('resultsFoundPlural') : t('resultsFoundSingular')}
+                  {searchResults.length} {searchResults.length > 1 ? "results found" : "result found"}
                 </p>
               </div>
               <button
                 onClick={() => setCurrentPage('search')}
                 className="px-4 py-2 bg-gray-600 text-white rounded-md text-sm font-medium hover:bg-gray-700 transition-colors flex items-center"
               >
-                ← {t('newSearch')}
+                ← {"New Search"}
               </button>
             </div>
 
@@ -1302,9 +1302,9 @@ function App() {
                       <th className="px-4 py-3 text-left text-sm font-semibold">{t('dunsNumber')}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{t('companyNameD')}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{t('score')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('address')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('city')}</th>
-                      <th className="px-4 py-3 text-left text-sm font-semibold">{t('country')}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Address"}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"City"}</th>
+                      <th className="px-4 py-3 text-left text-sm font-semibold">{"Country/Region"}</th>
                       <th className="px-4 py-3 text-left text-sm font-semibold">{t('registration')}</th>
                       <th className="px-4 py-3 text-center text-sm font-semibold">{t('action')}</th>
                     </tr>
@@ -1376,7 +1376,7 @@ function App() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
-                            {t('viewDetails')}
+                            {"View Details"}
                           </button>
                         </td>
                       </tr>
@@ -1389,7 +1389,7 @@ function App() {
                 <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                <h3 className="mt-2 text-sm font-medium text-gray-900">{t('noResults')}</h3>
+                <h3 className="mt-2 text-sm font-medium text-gray-900">{"No results found"}</h3>
                 <p className="mt-1 text-sm text-gray-500">
                   {t('noResultsMessage')}
                 </p>
@@ -1405,7 +1405,7 @@ function App() {
             <div className="flex justify-between items-center mb-6">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  {t('companyDetails')}
+                  {"Company Details"}
                 </h1>
                 <p className="mt-1 text-sm text-gray-600">
                   {selectedCompany.company_name}
@@ -1415,7 +1415,7 @@ function App() {
                 onClick={backToResults}
                 className="px-4 py-2 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700 transition-colors flex items-center"
               >
-                {t('backToResults')}
+                {"← Back to Results"}
               </button>
             </div>
 
@@ -1491,7 +1491,7 @@ function App() {
                           {/* Statut opérationnel */}
                           {selectedCompany.operating_status && (
                             <div className="bg-white p-3 rounded border">
-                              <div className="text-xs text-gray-500 font-medium">{t('operatingStatus')}</div>
+                              <div className="text-xs text-gray-500 font-medium">{"Operating Status"}</div>
                               <div className={`text-sm font-medium ${
                                 selectedCompany.operating_status.toLowerCase().includes('active') 
                                   ? 'text-green-600' 
@@ -1774,7 +1774,7 @@ function App() {
                       {/* Forme juridique */}
                       {selectedCompany.legal_form && (
                         <div className="bg-white p-3 rounded border">
-                          <div className="text-xs text-gray-500 font-medium">{t('legalForm')}</div>
+                          <div className="text-xs text-gray-500 font-medium">{"Legal Form"}</div>
                           <div className="text-sm font-medium text-gray-800">{selectedCompany.legal_form}</div>
                         </div>
                       )}
@@ -1786,7 +1786,7 @@ function App() {
                 {(loadingHierarchy || hierarchyData?.hierarchy || selectedCompany?.corporate_hierarchy) && (
                   <div className="mb-8">
                     <div className="bg-indigo-500 text-white px-4 py-2 rounded-t-md flex justify-between items-center">
-                      <h4 className="font-semibold">{t('corporateHierarchy')}</h4>
+                      <h4 className="font-semibold">{"Corporate Hierarchy"}</h4>
                       <div className="flex items-center space-x-2">
                         {(hierarchyData?.hierarchy || selectedCompany?.corporate_hierarchy) && (
                           <>
@@ -1804,7 +1804,7 @@ function App() {
                               onClick={() => setShowDownwardFamilyTree(!showDownwardFamilyTree)}
                               className="text-sm bg-indigo-600 hover:bg-indigo-700 px-3 py-1 rounded-md transition-colors"
                             >
-                              {showDownwardFamilyTree ? t('hierarchyView') : t('downwardTree')}
+                              {showDownwardFamilyTree ? "Hierarchy View" : "Downward Tree"}
                             </button>
                           </>
                         )}
@@ -1846,7 +1846,7 @@ function App() {
                                       <div className="bg-blue-100 border border-blue-300 rounded p-3 ml-5">
                                         <p className="font-semibold text-blue-900">{selectedCompany?.company_name}</p>
                                         <p className="text-sm text-blue-700">DUNS: {currentEntityDuns}</p>
-                                        <p className="text-xs text-blue-600">{t('level')}: 1</p>
+                                        <p className="text-xs text-blue-600">{"Level"}: 1</p>
                                       </div>
                                     </div>
                                     
@@ -1870,7 +1870,7 @@ function App() {
                                                     <p className="text-sm text-purple-700">DUNS: {member.duns}</p>
                                                     <div className="flex items-center mt-1 space-x-2">
                                                       <span className="inline-block px-2 py-1 bg-purple-200 text-purple-800 text-xs rounded">
-                                                        {t('level')}: {member.hierarchyLevel}
+                                                        {"Level"}: {member.hierarchyLevel}
                                                       </span>
                                                       {member.relationshipDescription && (
                                                         <span className="inline-block px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded">
@@ -1916,7 +1916,7 @@ function App() {
                                 {/* Global Ultimate */}
                                 {hierarchy.globalUltimate && (
                                   <div>
-                                    <h5 className="font-medium text-gray-900 mb-2">{t('globalUltimate')}</h5>
+                                    <h5 className="font-medium text-gray-900 mb-2">{"Global Ultimate"}</h5>
                                     <div className="bg-green-50 border border-green-200 hover:border-green-300 rounded-md p-3 cursor-pointer transition-colors" onClick={() => navigateToCompany(hierarchy.globalUltimate.duns, hierarchy.globalUltimate.primaryName)}>
                                       <div className="flex justify-between items-center">
                                         <div>
@@ -1939,7 +1939,7 @@ function App() {
                                 {/* Domestic Ultimate */}
                                 {hierarchy.domesticUltimate && (
                                   <div>
-                                    <h5 className="font-medium text-gray-900 mb-2">{t('domesticUltimate')}</h5>
+                                    <h5 className="font-medium text-gray-900 mb-2">{"Domestic Ultimate"}</h5>
                                     <div className="bg-blue-50 border border-blue-200 hover:border-blue-300 rounded-md p-3 cursor-pointer transition-colors" onClick={() => navigateToCompany(hierarchy.domesticUltimate.duns, hierarchy.domesticUltimate.primaryName)}>
                                       <div className="flex justify-between items-center">
                                         <div>
@@ -1962,7 +1962,7 @@ function App() {
                                 {/* Subsidiaries */}
                                 {hierarchy.subsidiaries && hierarchy.subsidiaries.length > 0 && (
                                   <div>
-                                    <h5 className="font-medium text-gray-900 mb-2">{t('subsidiaries')} ({hierarchy.subsidiaries.length})</h5>
+                                    <h5 className="font-medium text-gray-900 mb-2">{"Subsidiaries"} ({hierarchy.subsidiaries.length})</h5>
                                     <div className="bg-purple-50 border border-purple-200 rounded-md p-3 max-h-48 overflow-y-auto">
                                       {hierarchy.subsidiaries.map((subsidiary, index) => (
                                         <div key={index} className="flex justify-between items-center py-2 border-b last:border-b-0 hover:bg-purple-100 cursor-pointer transition-colors rounded px-2" onClick={() => navigateToCompany(subsidiary.duns, subsidiary.primaryName)}>
@@ -1987,7 +1987,7 @@ function App() {
                                 {/* Family Tree */}
                                 {hierarchy.familyTreeMembers && hierarchy.familyTreeMembers.length > 0 && (
                                   <div>
-                                    <h5 className="font-medium text-gray-900 mb-2">{t('familyTree')} ({hierarchy.familyTreeMembers.length} {t('members')})</h5>
+                                    <h5 className="font-medium text-gray-900 mb-2">{"Family Tree"} ({hierarchy.familyTreeMembers.length} {t('members')})</h5>
                                     <div className="bg-gray-50 border border-gray-200 rounded-md p-3 max-h-48 overflow-y-auto">
                                       {hierarchy.familyTreeMembers.map((member, index) => (
                                         <div key={index} className="flex justify-between items-center py-2 border-b last:border-b-0 hover:bg-gray-100 cursor-pointer transition-colors rounded px-2" onClick={() => navigateToCompany(member.duns, member.primaryName)}>
@@ -1996,7 +1996,7 @@ function App() {
                                             <p className="text-sm text-gray-600">DUNS: {member.duns}</p>
                                             {member.hierarchyLevel !== undefined && (
                                               <span className="inline-block px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded mt-1">
-                                                {t('level')}: {member.hierarchyLevel}
+                                                {"Level"}: {member.hierarchyLevel}
                                               </span>
                                             )}
                                           </div>
@@ -2030,7 +2030,7 @@ function App() {
                 
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="flex justify-between items-center text-xs text-gray-500">
-                    <p>{t('lastUpdated')}: {new Date(selectedCompany.last_updated).toLocaleString('fr-FR')}</p>
+                    <p>{"Last Updated"}: {new Date(selectedCompany.last_updated).toLocaleString('fr-FR')}</p>
                     <p>{t('source')}: {selectedCompany.data_source || "D&B API"}</p>
                   </div>
                 </div>

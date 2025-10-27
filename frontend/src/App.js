@@ -420,345 +420,10 @@ function App() {
   };
 
   // Traductions
-  const translations = {
-    fr: {
-      // Authentification
-      login: "Connexion sécurisée requise",
-      username: "Nom d'utilisateur",
-      password: "Mot de passe", 
-      signIn: "Se connecter",
-      logout: "Déconnexion",
-      
-      // Navigation
-      search: "Recherche",
-      results: "Résultats",
-      cached: "Historique",
-      
-      // Search
-      searchTitle: "Recherche Business Partner",
-      searchSubtitle: "Utilisation de l'API D&B",
-      duns: "Numéro D-U-N-S®",
-      localIdentifier: "Identifiant local",
-      companyName: "Nom de l'entreprise",
-      address: "Adresse",
-      city: "Ville",
-      postalCode: "Code postal",
-      state: "État",
-      country: "Pays/Région",
-      continent: "Continent", 
-      phoneFax: "Téléphone/Fax",
-      phonePresent: "Téléphone présent",
-      faxPresent: "Fax présent",
-      searchButton: "Lancer la recherche",
-      clearButton: "Effacer",
-      searchInProgress: "Recherche D&B en cours...",
-      launchSearch: "Lancer la recherche D&B",
-      exactMatch: "Correspondance exacte",
-      exactMatchHelp: "Rechercher uniquement les noms exacts",
-      
-      // Sections
-      identificationSection: "🆔 Identification",
-      addressSection: "🏢 Adresse", 
-      contactSection: "📞 Contact",
-      selectContinent: "Sélectionner un continent",
-      
-      // Continents
-      europe: "Europe",
-      northAmerica: "Amérique du Nord",
-      southAmerica: "Amérique du Sud",
-      asia: "Asie",
-      africa: "Afrique",
-      oceania: "Océanie",
-      antarctica: "Antarctique",
-      
-      // Résultats
-      searchResults: "Résultats de recherche",
-      noResults: "Aucun résultat trouvé",
-      selectCompany: "Sélectionner cette entreprise",
-      
-      // Détails entreprise
-      companyDetails: "Détails de l'entreprise",
-      identification: "🆔 Identification", 
-      addresses: "🏢 Adresses",
-      contact: "📞 Contact",
-      financial: "💰 Informations financières",
-      corporateHierarchy: "🏢 Hiérarchie Corporative",
-      downwardTree: "📊 Arbre Descendant",
-      hierarchyView: "📈 Vue Hiérarchie",
-      
-      // Hiérarchie
-      globalUltimate: "🌍 Société Mère Mondiale (Global Ultimate)",
-      domesticUltimate: "🏠 Société Mère Nationale (Domestic Ultimate)", 
-      subsidiaries: "🏢 Filiales",
-      familyTree: "🌳 Arbre Familial",
-      downwardFamilyTree: "🌳 Arbre Familial Descendant",
-      currentEntity: "Entité Actuelle",
-      subsidiariesAndAffiliates: "Filiales & Subsidiaires",
-      noSubsidiaries: "Aucune filiale ou subsidiaire trouvée",
-      noHierarchy: "Aucune information de hiérarchie disponible",
-      
-      // Messages
-      loading: "Chargement...",
-      error: "Erreur",
-      lastUpdated: "Dernière mise à jour",
-      source: "Source",
-      
-      // Navigation
-      navigateToDetails: "Voir les détails", 
-      backToPrevious: "← Retour",
-      navigationError: "Erreur de navigation",
-      backToResults: "← Retour aux résultats",
-      viewDetails: "Voir détails",
-      
-      // Tableau
-      dunsNumber: "D-U-N-S®",
-      companyNameD: "Nom D&B", 
-      score: "Score",
-      address: "Adresse",
-      city: "Ville", 
-      country: "Pays",
-      registration: "Registration",
-      action: "Action",
-      
-      // Messages détaillés
-      noResultsMessage: "Essayez de modifier vos critères de recherche.",
-      resultsFoundSingular: "résultat trouvé",
-      resultsFoundPlural: "résultats trouvés",
-      newSearch: "Nouvelle recherche",
-      
-      // Vue détaillée - Sections
-      identificationStatus: "🆔 Identification & Statut",
-      addressLocation: "🏢 Adresses & Localisation",
-      contactCommunication: "📞 Contact & Communication",
-      financialInfo: "💰 Informations financières",
-      legalName: "Nom légal",
-      operatingStatus: "Statut opérationnel",
-      legalForm: "Forme juridique",
-      yearStarted: "Année de création",
-      employeeCount: "Nombre d'employés",
-      salesVolume: "Chiffre d'affaires",
-      postalAddress: "Adresse postale",
-      mailingAddress: "Adresse de correspondance",
-      phone: "Téléphone",
-      fax: "Fax",
-      email: "Email",
-      website: "Site web",
-      sicCode: "Code SIC",
-      naicsCode: "Code NAICS",
-      industry: "Secteur d'activité",
-      nationalIds: "Identifiants nationaux",
-      type: "Type",
-      number: "Numéro",
-      
-      // Hiérarchie - Export
-      exportHierarchy: "📥 Exporter Hiérarchie",
-      exportToExcel: "Exporter en Excel",
-      exportingPleaseWait: "Export en cours...",
-      
-      // Autres messages
-      consultedOn: "Consulté le",
-      criteria: "Critères",
-      members: "membres",
-      level: "Niveau",
-      noHierarchyAvailable: "Aucune information de hiérarchie disponible",
-      dataSource: "Source des données",
-      lastUpdated: "Dernière mise à jour",
-      
-      // Traductions supplémentaires pour la vue détaillée
-      identificationIdentifiers: "Identifiants D&B",
-      dunsNumberTitle: "Numéro D-U-N-S®",
-      establishmentType: "Type d'établissement",
-      headquarters: "🏢 Siège social",
-      establishment: "🏬 Établissement",
-      active: "✅ Actif",
-      inactive: "❌ Inactif",
-      sectorCodes: "Codes sectoriels",
-      primarySicCodeTitle: "Code SIC principal",
-      preferred: "Principal",
-      typeLabel: "Type",
-      classLabel: "Classe",
-      locationLabel: "Lieu",
-      searchCriterion: "Critère de recherche",
-      searchCriterionUsed: "Source",
-      postalAddressTitle: "Adresse postale (Siège)",
-      coordinates: "Coordonnées",
-      mailingAddressTitle: "Adresse de correspondance",
-      identicalToPostalAddress: "Identique à l'adresse postale",
-      primaryPhone: "Téléphone principal",
-      faxNumber: "Télécopieur",
-      employeeNumber: "Nombre d'employés",
-      annualRevenueTitle: "Chiffre d'affaires annuel"
-    },
-    en: {
-      // Authentication
-      login: "Secure connection required",
-      username: "Username",
-      password: "Password",
-      signIn: "Sign In",
-      logout: "Logout",
-      
-      // Navigation
-      search: "Search",
-      results: "Results", 
-      cached: "History",
-      
-      // Search
-      searchTitle: "Business Partner Search",
-      searchSubtitle: "Using D&B API",
-      duns: "D-U-N-S® Number",
-      localIdentifier: "Local Identifier",
-      companyName: "Company Name",
-      address: "Address",
-      city: "City",
-      postalCode: "Postal Code",
-      state: "State",
-      country: "Country/Region",
-      continent: "Continent",
-      phoneFax: "Phone/Fax",
-      phonePresent: "Phone Present",
-      faxPresent: "Fax Present", 
-      searchButton: "Search",
-      clearButton: "Clear",
-      searchInProgress: "D&B Search in progress...",
-      launchSearch: "Launch D&B Search",
-      exactMatch: "Exact Match",
-      exactMatchHelp: "Search only exact names",
-      
-      // Sections
-      identificationSection: "🆔 Identification",
-      addressSection: "🏢 Address", 
-      contactSection: "📞 Contact",
-      selectContinent: "Select continent",
-      
-      // Continents
-      europe: "Europe",
-      northAmerica: "North America",
-      southAmerica: "South America",
-      asia: "Asia",
-      africa: "Africa",
-      oceania: "Oceania",
-      antarctica: "Antarctica",
-      
-      // Results
-      searchResults: "Search Results",
-      noResults: "No results found",
-      selectCompany: "Select this company",
-      
-      // Company Details
-      companyDetails: "Company Details",
-      identification: "🆔 Identification",
-      addresses: "🏢 Addresses", 
-      contact: "📞 Contact",
-      financial: "💰 Financial Information",
-      corporateHierarchy: "🏢 Corporate Hierarchy",
-      downwardTree: "📊 Downward Tree",
-      hierarchyView: "📈 Hierarchy View",
-      
-      // Hierarchy
-      globalUltimate: "🌍 Global Ultimate",
-      domesticUltimate: "🏠 Domestic Ultimate",
-      subsidiaries: "🏢 Subsidiaries",
-      familyTree: "🌳 Family Tree", 
-      downwardFamilyTree: "🌳 Downward Family Tree",
-      currentEntity: "Current Entity",
-      subsidiariesAndAffiliates: "Subsidiaries & Affiliates",
-      noSubsidiaries: "No subsidiaries or affiliates found",
-      noHierarchy: "No hierarchy information available",
-      
-      // Messages
-      loading: "Loading...",
-      error: "Error", 
-      lastUpdated: "Last updated",
-      source: "Source",
-      
-      // Navigation
-      navigateToDetails: "View details",
-      backToPrevious: "← Back", 
-      navigationError: "Navigation error",
-      backToResults: "← Back to results",
-      viewDetails: "View details",
-      
-      // Table  
-      dunsNumber: "D-U-N-S®",
-      companyNameD: "D&B Name",
-      score: "Score", 
-      address: "Address",
-      city: "City",
-      country: "Country", 
-      registration: "Registration",
-      action: "Action",
-      
-      // Detailed messages
-      noResultsMessage: "Try modifying your search criteria.",
-      resultsFoundSingular: "result found",
-      resultsFoundPlural: "results found", 
-      newSearch: "New search",
-      
-      // Detailed view - Sections
-      identificationStatus: "🆔 Identification & Status",
-      addressLocation: "🏢 Addresses & Location",
-      contactCommunication: "📞 Contact & Communication",
-      financialInfo: "💰 Financial Information",
-      legalName: "Legal name",
-      operatingStatus: "Operating status",
-      legalForm: "Legal form",
-      yearStarted: "Year started",
-      employeeCount: "Employee count",
-      salesVolume: "Sales volume",
-      postalAddress: "Postal address",
-      mailingAddress: "Mailing address",
-      phone: "Phone",
-      fax: "Fax",
-      email: "Email",
-      website: "Website",
-      sicCode: "SIC Code",
-      naicsCode: "NAICS Code",
-      industry: "Industry",
-      nationalIds: "National identifiers",
-      type: "Type",
-      number: "Number",
-      
-      // Hierarchy - Export
-      exportHierarchy: "📥 Export Hierarchy",
-      exportToExcel: "Export to Excel",
-      exportingPleaseWait: "Exporting...",
-      
-      // Other messages
-      consultedOn: "Consulted on",
-      criteria: "Criteria", 
-      members: "members",
-      level: "Level",
-      noHierarchyAvailable: "No hierarchy information available",
-      dataSource: "Data source",
-      lastUpdated: "Last updated",
 
-      identificationIdentifiers: "D&B Identifiers",
-      dunsNumberTitle: "D-U-N-S® Number",
-      establishmentType: "Establishment Type",
-      headquarters: "🏢 Headquarters",
-      establishment: "🏬 Establishment",
-      active: "✅ Active",
-      inactive: "❌ Inactive",
-      sectorCodes: "Sector Codes",
-      primarySicCodeTitle: "Primary SIC Code",
-      preferred: "Primary",
-      typeLabel: "Type",
-      classLabel: "Class",
-      locationLabel: "Location",
-      searchCriterion: "Search criterion",
-      searchCriterionUsed: "Source",
-      postalAddressTitle: "Postal address (Headquarters)",
-      coordinates: "Coordinates",
-      mailingAddressTitle: "Mailing address",
-      identicalToPostalAddress: "Same as postal address",
-      primaryPhone: "Primary phone",
-      faxNumber: "Fax",
-      employeeNumber: "Number of employees",
-      annualRevenueTitle: "Annual revenue",
-    }
-  };
+  // All text in English - no translation needed
 
-  const t = (key) => translations[language][key] || key;
+
 
   useEffect(() => {
     checkAuthentication();
@@ -1054,8 +719,8 @@ function App() {
           street_address: "Rue",
           national_id: "ID National",
           phone: "Téléphone",
-          website: t("website"),
-          email: t("email"),
+          website: "Website",
+          email: "Email",
           industry: "Secteur",
           business_type: "Type d'entreprise",
           employee_count_min: "Employés min",
@@ -1842,8 +1507,8 @@ function App() {
                               <div className="text-xs text-gray-500 font-medium">Type d'établissement</div>
                               <div className="text-sm font-medium text-gray-800">
                                 {selectedCompany.business_type.includes('Headquarters') || selectedCompany.business_type.includes('Single') 
-                                  ? t("headquarters") 
-                                  : t("establishment")}
+                                  ? "🏢 Headquarters" 
+                                  : "🏬 Establishment"}
                               </div>
                               <div className="text-xs text-gray-600 mt-1">{selectedCompany.business_type}</div>
                             </div>
@@ -1858,7 +1523,7 @@ function App() {
                                   ? 'text-green-600' 
                                   : 'text-red-600'
                               }`}>
-                                {selectedCompany.operating_status.toLowerCase().includes('active') ? t("active") : t("inactive")}
+                                {selectedCompany.operating_status.toLowerCase().includes('active') ? "✅ Active" : "❌ Inactive"}
                               </div>
                               <div className="text-xs text-gray-600 mt-1">{selectedCompany.operating_status}</div>
                             </div>
@@ -1978,7 +1643,7 @@ function App() {
                                 {/* Postal Code */}
                                 {selectedCompany.address.postal_code && (
                                   <div>
-                                    <span className="text-xs text-gray-500 font-medium">{t("postalCode")}: </span>
+                                    <span className="text-xs text-gray-500 font-medium">{"Postal Code"}: </span>
                                     <span>{selectedCompany.address.postal_code}</span>
                                   </div>
                                 )}
@@ -1986,7 +1651,7 @@ function App() {
                                 {/* City */}
                                 {selectedCompany.address.city && (
                                   <div>
-                                    <span className="text-xs text-gray-500 font-medium">{t("city")}: </span>
+                                    <span className="text-xs text-gray-500 font-medium">{"City"}: </span>
                                     <span>{selectedCompany.address.city}</span>
                                   </div>
                                 )}
@@ -1994,7 +1659,7 @@ function App() {
                                 {/* State (optional) */}
                                 {selectedCompany.address.state && (
                                   <div>
-                                    <span className="text-xs text-gray-500 font-medium">{t("state")}: </span>
+                                    <span className="text-xs text-gray-500 font-medium">{"State"}: </span>
                                     <span>{selectedCompany.address.state}</span>
                                   </div>
                                 )}
@@ -2002,7 +1667,7 @@ function App() {
                                 {/* Country */}
                                 {selectedCompany.address.country && (
                                   <div>
-                                    <span className="text-xs text-gray-500 font-medium">{t("country")}: </span>
+                                    <span className="text-xs text-gray-500 font-medium">{"Country/Region"}: </span>
                                     <span className="font-medium">{selectedCompany.address.country}</span>
                                   </div>
                                 )}

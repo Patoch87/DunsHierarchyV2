@@ -505,7 +505,7 @@ function App() {
     });
     
     if (!hasSearchCriteria) {
-      setError("Veuillez remplir au moins un critère de recherche");
+      setError("Please fill in at least one search criterion");
       return;
     }
 

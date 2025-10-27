@@ -32,7 +32,10 @@ function App() {
     // Contact
     phone_fax: "",               // Téléphone/Fax
     has_phone: false,            // Téléphone présent
-    has_fax: false               // Fax présent
+    has_fax: false,              // Fax présent
+    
+    // Options de recherche
+    exact_match: false           // Correspondance exacte sur le nom
   });
   
   const [searchResults, setSearchResults] = useState([]);

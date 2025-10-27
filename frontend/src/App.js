@@ -539,7 +539,7 @@ function App() {
       setSearchResults(response.data.results);
       
       if (response.data.results.length === 0) {
-        setError("Aucune entreprise trouvée avec ces critères");
+        setError("No companies found with these criteria");
       } else {
         fetchCachedCompanies(); // Refresh cached list
       }

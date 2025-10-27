@@ -514,8 +514,14 @@ async def unified_search(
             
             # Company name search
             elif criteria.company_name:
-                if criteria.company_name.lower() in company.company_name.lower():
-                    match = True
+                if criteria.exact_match:
+                    # Exact match: compare normalized strings
+                    if criteria.company_name.lower().strip() == company.company_name.lower().strip():
+                        match = True
+                else:
+                    # Partial match (default)
+                    if criteria.company_name.lower() in company.company_name.lower():
+                        match = True
             
             # Geographic search
             elif criteria.continent or criteria.country or criteria.city:

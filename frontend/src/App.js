@@ -551,11 +551,11 @@ function App() {
         const validationErrors = error.response.data.detail;
         if (Array.isArray(validationErrors)) {
           const errorMessages = validationErrors.map(err => 
-            `${err.loc ? err.loc.join('.') : 'Champ'}: ${err.msg}`
+            `${err.loc ? err.loc.join('.') : 'Field'}: ${err.msg}`
           ).join(', ');
-          setError("Erreurs de validation : " + errorMessages);
+          setError("Validation errors: " + errorMessages);
         } else {
-          setError("Erreur de validation : " + validationErrors);
+          setError("Validation error: " + validationErrors);
         }
       } else {
         setError("Search error: " + (error.response?.data?.detail || error.message));

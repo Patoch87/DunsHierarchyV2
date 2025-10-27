@@ -546,8 +546,8 @@ function App() {
       website: "Site web",
       sicCode: "Code SIC",
       naicsCode: "Code NAICS",
-      industry: t("industry"),
-      nationalIds: t("nationalIds"),
+      industry: "Secteur d'activité",
+      nationalIds: "Identifiants nationaux",
       type: "Type",
       number: "Numéro",
       

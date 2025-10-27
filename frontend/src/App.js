@@ -1582,21 +1582,21 @@ function App() {
                             </div>
                           )}
                           
-                          {/* Secteur d'activité */}
+                          {/* Industry */}
                           {selectedCompany.industry && (
                             <div className="bg-white p-3 rounded border">
-                              <div className="text-xs text-gray-500 font-medium">Secteur d'activité</div>
+                              <div className="text-xs text-gray-500 font-medium">Industry</div>
                               <div className="text-sm text-gray-800">{selectedCompany.industry}</div>
                             </div>
                           )}
                         </div>
                       </div>
                       
-                      {/* Colonne 3: Identifiants nationaux */}
+                      {/* Column 3: National Identifiers */}
                       <div>
-                        <h5 className="font-medium text-gray-900 mb-3">Identifiants nationaux</h5>
+                        <h5 className="font-medium text-gray-900 mb-3">National Identifiers</h5>
                         <div className="space-y-2">
-                          {/* Numéros d'enregistrement officiels */}
+                          {/* Official registration numbers */}
                           {selectedCompany.registration_numbers && selectedCompany.registration_numbers.length > 0 ? (
                             selectedCompany.registration_numbers.map((reg, index) => (
                               <div key={index} className="bg-white p-3 rounded border">
@@ -1604,28 +1604,28 @@ function App() {
                                   <div className="flex items-center">
                                     <span className="font-mono text-green-700 font-medium">{reg.number}</span>
                                     {reg.is_preferred && (
-                                      <span className="ml-2 px-1.5 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">Principal</span>
+                                      <span className="ml-2 px-1.5 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">Primary</span>
                                     )}
                                   </div>
                                   <div className="text-xs text-gray-600">
                                     <span className="font-medium">Type:</span> {reg.type}
-                                    {reg.class && <span className="ml-2"><span className="font-medium">Classe:</span> {reg.class}</span>}
-                                    {reg.location && <span className="ml-2"><span className="font-medium">Lieu:</span> {reg.location}</span>}
+                                    {reg.class && <span className="ml-2"><span className="font-medium">Class:</span> {reg.class}</span>}
+                                    {reg.location && <span className="ml-2"><span className="font-medium">Location:</span> {reg.location}</span>}
                                   </div>
                                 </div>
                               </div>
                             ))
                           ) : (
-                            /* Identifiant national du critère de recherche */
+                            /* National identifier from search criterion */
                             selectedCompany.search_criteria && selectedCompany.search_criteria.national_id && (
                               <div className="bg-yellow-50 p-3 rounded border border-yellow-200">
                                 <div className="flex flex-col space-y-1">
                                   <div className="flex items-center">
                                     <span className="font-mono text-orange-700 font-medium">{selectedCompany.search_criteria.national_id}</span>
-                                    <span className="ml-2 px-1.5 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded-full">Critère de recherche</span>
+                                    <span className="ml-2 px-1.5 py-0.5 bg-yellow-100 text-yellow-800 text-xs rounded-full">Search Criterion</span>
                                   </div>
                                   <div className="text-xs text-gray-600">
-                                    <span className="font-medium">Source:</span> Critère de recherche utilisé
+                                    <span className="font-medium">Source:</span> Used search criterion
                                   </div>
                                 </div>
                               </div>

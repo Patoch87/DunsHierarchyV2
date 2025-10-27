@@ -53,7 +53,7 @@ function App() {
   const [navigationHistory, setNavigationHistory] = useState([]);
   
   // Navigation entre pages
-  const [currentPage, setCurrentPage] = useState('search'); // 'search', 'results', 'details'
+  const [currentPage, setCurrentPage] = useState('search'); // 'search' or 'details'
 
   const navigateToCompany = async (duns, companyName) => {
     if (!duns) return;
